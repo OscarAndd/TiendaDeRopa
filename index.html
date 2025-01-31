@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <title>My Clothes Store</title>
+</head>
+<body>
+    <aside id="micarrito">
+        <h1 class="h11">Mis Compras</h1>
+        <div id="contenedor1" class="contenedor1">
+            <table class="tabla" id="tabla">
+                <tr>
+                    <td rowspan="4"><img class="preview" id="preview"></img></td>
+                    <td>
+                        <p id="nombre1" class="nombre1"></p>
+                    </td>
+                    <td rowspan="4"> <button class="eliminar" id="eliminar"></button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="talla1" class="talla1"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p id="precio1" class="precio1"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="number" placeholder="Cantidad" id="cantidad" class="cantidad" name="cantidad"
+                            value=""></input></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="contenedor2" id="contenedor2">
+            <p class="total" id="total">total: $0</p>
+            <button class="pagar">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+    <header>
+        <p class="logo" id="inicio">
+            &Gg; My Clothes Store &Ll;
+        </p>
+        <nav class="menu">
+            <a href="#inicio">&Gg; My Clothes Store &Ll;</a>
+            <a href="#camisetas">Camisetas</a>
+            <a href="#pantalones">Pantalones</a>
+            <a href="#accesorios">Accesorios</a>
+            <a href="#zapatos">Zapatos</a>
+            <a href="#zapatillas">Zapatillas</a>
+            <a href="#deportes">Deportes</a>
+            <a onclick=mostrarCarrito() id="carritoVacio" class="carritoCompras"></a>
+        </nav>
+        <a class="promo" href="#pantalones"><b>¡OFERTA DEL DÍA!</b><br /> POR COMPRAS SUPERIORES A $120.000
+            LLEVAS EL 15% Dto EN TODOS LOS PRODUCTOS</a>
+        <!-- <a class="promo" href="#pantalones">¡OFERTA DEL DÍA!<br /> POR LA COMPRA DE 2 PANTALONES
+            LLEVAS EL 3ro GRATIS </a>-->
+    </header>
+    <main id="miTienda">
+        <!----------------------------------------------------------->
+        <h1 id="camisetas">Camisetas</h1>
+        <div class="contenedorCamisetas">
+            <div class="producto" id="producto">
+                <img src="/camiseta1.avif" alt="camiseta1">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta HT</p>
+                    <p id="talla">Talla: L</p>
+                    <p id="precio">$48.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="camiseta2.avif" alt="camiseta2">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta JT</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="camiseta3.avif" alt="camiseta3">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta IT</p>
+                    <p id="talla">Talla: XL</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="camiseta4.avif" alt="camiseta4">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta KT</p>
+                    <p id="talla">Talla: S</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="camiseta5.avif" alt="camiseta5">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta MT</p>
+                    <p id="talla">Talla: L</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="camiseta6.avif" alt="camiseta6">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta NT</p>
+                    <p id="talla">Talla: M</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------->
+
+        <h1 id="pantalones">Pantalones</h1>
+        <div class="contenedorPantalones">
+            <div class="producto" id="producto">
+                <img src="/vaqueros.avif" alt="Vaqueros">
+                <div class="descripcion">
+                    <p id="nombre">Vaqueros</p>
+                    <p id="talla">Talla: 30-32</p>
+                    <p id="precio">$45.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/vaqueros elasticos.avif" alt="Vaqueros Elasticos">
+                <div class="descripcion">
+                    <p id="nombre">Vaqueros Elasticos</p>
+                    <p id="talla">Talla: 32-34 </p>
+                    <p id="precio">$44.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/vaquerosdama.avif" alt="vaquero Dama">
+                <div class="descripcion">
+                    <p id="nombre">Vaqueros Dama</p>
+                    <p id="talla">Talla: 32-34 </p>
+                    <p id="precio">$44.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/vaqueroskinny.avif" alt="Vaquero skinny">
+                <div class="descripcion">
+                    <p id="nombre">Vaqueros Skinny</p>
+                    <p id="talla">Talla: 32-34 </p>
+                    <p id="precio">$44.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/jeans.avif" alt="jeans">
+                <div class="descripcion">
+                    <p id="nombre">Jeans</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$65.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/entuvado.avif" alt="entuvado">
+                <div class="descripcion">
+                    <p id="nombre">Entuvado</p>
+                    <p id="talla">Talla: 28-30</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------->
+
+        <h1 id="accesorios">Accesorios</h1>
+        <div class="contenedorAccesorios">
+            <div class="producto" id="producto">
+                <img src="/bufanda.avif" alt="bufanda">
+                <div class="descripcion">
+                    <p id="nombre">Bufanda</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$25.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gafasgirafa.avif" alt="Gafas Girafa">
+                <div class="descripcion">
+                    <p id="nombre">Gafas Girafa</p>
+                    <p id="talla">Talla: Única </p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gafasmorado.avif" alt="Gafas color morado">
+                <div class="descripcion">
+                    <p id="nombre">Gafas moradas</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gafasnegras.avif" alt="Gafas color Negro">
+                <div class="descripcion">
+                    <p id="nombre">Gafas Negras</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gorrogris.avif" alt="Gorro gris">
+                <div class="descripcion">
+                    <p id="nombre">Gorro Gris</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$35.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gorronaranja.avif" alt="Gorro anaranjado">
+                <div class="descripcion">
+                    <p id="nombre">Gorro Naranja</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$35.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gorronegro.avif" alt="Gorro negro">
+                <div class="descripcion">
+                    <p id="nombre">Gorro Negro</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$32.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/gorrorosa.avif" alt="Gorro rosa">
+                <div class="descripcion">
+                    <p id="nombre">Gorro Rosa</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$37.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/relojnegro.avif" alt="Reloj Negro">
+                <div class="descripcion">
+                    <p id="nombre">Reloj Negro</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$77.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/relojrosa.webp" alt="Reloj rosa">
+                <div class="descripcion">
+                    <p id="nombre">Reloj Rosa</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$87.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/relojsmart.avif" alt="Reloj inteligente">
+                <div class="descripcion">
+                    <p id="nombre">SmarthWatch</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$67.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------->
+
+        <h1 id="zapatos">Zapatos</h1>
+        <div class="contenedorZapatos">
+            <div class="producto" id="producto">
+                <img src="/zapatocafe.avif" alt="Zapato Cafe">
+                <div class="descripcion">
+                    <p id="nombre">Zapato Cafe</p>
+                    <p id="talla">Talla: 39</p>
+                    <p id="precio">$85.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/tacongris.avif" alt="Tacón Gris">
+                <div class="descripcion">
+                    <p id="nombre">Tacón Gris</p>
+                    <p id="talla">Talla: 37 </p>
+                    <p id="precio">$60.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatonegro.avif" alt="Zapato Negro">
+                <div class="descripcion">
+                    <p id="nombre">Zapato Negro</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$56.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+
+            <div class="producto" id="producto">
+                <img src="/taconnegro.avif" alt="Tacón Negro">
+                <div class="descripcion">
+                    <p id="nombre">Tacón Negro</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$55.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatonegro2.avif" alt="Zapato Negro">
+                <div class="descripcion">
+                    <p id="nombre">Zapato Negro</p>
+                    <p id="talla">Talla: 41</p>
+                    <p id="precio">$78.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatorojo.jpeg" alt="Zapato Rojo">
+                <div class="descripcion">
+                    <p id="nombre">Zapato Rojo</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$75.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------->
+
+        <h1 id="zapatillas">Zapatillas</h1>
+        <div class="contenedorZapatillas">
+            <div class="producto" id="producto">
+                <img src="/zapatillanegra.jpeg" alt="Zapatilla negra">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla Negra</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$95.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillaplataformablanca.avif" alt="Zapatilla plataforma blanca">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla con plataforma blanca</p>
+                    <p id="talla">Talla: 37 </p>
+                    <p id="precio">$90.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillaplataformanegra.avif" alt="Zapatilla plataforma negra">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla con plataforma negra</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$96.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillasbeige.avif" alt="Zapatilla beige">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla beige</p>
+                    <p id="talla">Talla: 38</p>
+                    <p id="precio">$92.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillasblancas.avif" alt="Zapatilla blanca">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla blanca</p>
+                    <p id="talla">Talla: 41</p>
+                    <p id="precio">$97.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillasrosa.avif" alt="Zapatilla ROsa">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla Rosado</p>
+                    <p id="talla">Talla: 37</p>
+                    <p id="precio">$91.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/Zapatillasgris.avif" alt="Zapatilla gris">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla Gris</p>
+                    <p id="talla">Talla: 36</p>
+                    <p id="precio">$99.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/zapatillaverde.avif" alt="Zapatilla Verde">
+                <div class="descripcion">
+                    <p id="nombre">Zapatilla Verde</p>
+                    <p id="talla">Talla: 42</p>
+                    <p id="precio">$101.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+        <!----------------------------------------------------------->
+
+        <h1 id="deportes">Deportes</h1>
+        <div class="contenedorDeportes">
+            <div class="producto" id="producto">
+                <img src="/camisetanatacion.avif" alt="Camiseta de Natacion">
+                <div class="descripcion">
+                    <p id="nombre">Camiseta de Natación</p>
+                    <p id="talla">Talla: X</p>
+                    <p id="precio">$38.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/faldadeportiva.avif" alt="Falda deportiva">
+                <div class="descripcion">
+                    <p id="nombre">Falda Tennis</p>
+                    <p id="talla">Talla: Única </p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/conjuntoshort.avif" alt="Conjunto short Negro">
+                <div class="descripcion">
+                    <p id="nombre">Conjunto Short Negro</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/conjuntoshortazul.avif" alt="Conjunto Short Azul">
+                <div class="descripcion">
+                    <p id="nombre">Conjunto Short Azul</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/conjuntosudaderanegra.jpeg" alt="Conjunto Sudadera Negra">
+                <div class="descripcion">
+                    <p id="nombre">Conjunto Sudadera Negra</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$69.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/conjuntoshortrojo.avif" alt="Conjunto Short rojo">
+                <div class="descripcion">
+                    <p id="nombre">Conjunto Short Rojo</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$40.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/conjuntosudaderaroja.jpeg" alt="Conjunto Sudadera Negra">
+                <div class="descripcion">
+                    <p id="nombre">Conjunto Sudadera Negra</p>
+                    <p id="talla">Talla: Única</p>
+                    <p id="precio">$69.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/Sudaderaazul.avif" alt="sudadera azul">
+                <div class="descripcion">
+                    <p id="nombre">Sudadera Azul</p>
+                    <p id="talla">Talla: M</p>
+                    <p id="precio">$45.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+
+            <div class="producto" id="producto">
+                <img src="/sudaderagris.jpeg" alt="sudadera gris">
+                <div class="descripcion">
+                    <p id="nombre">Sudadera Gris</p>
+                    <p id="talla">Talla: L</p>
+                    <p id="precio">$45.000</p>
+                </div>
+                <div class="agregarCarro">
+                    <button class="boton"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="dropdown">
+            &Gg; My Clothes Store &Ll;
+        </p>
+        <div class="dropdown">
+            <p class="dropbtn">Contactenos</p>
+            <div class="dropdown-content">
+                <p>+57-3213213210<br />
+                    MyClothesStore@mail.com<br />
+                    Cll 1#1-1 Bogotá</p>
+
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <p class="dropbtn">Legal</p>
+            <div class="dropdown-content">
+                <p>- Las imagenes fueron extraidas de catalogos de aliexpress</p>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <p class="dropbtn">Sobre nosotros</p>
+            <div class="dropdown-content">
+                <p>- Somos una empresa Colombiana dedicada a la comercializacion de
+                    ropa nacional e importada.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+    <div>Developed by <i><b>OSCAR ANDRES ALVAREZ PARRA</b></i></div>
+    <script src="/funcionalidad/carrito.js"></script>
+    <script src="/funcionalidad/lista.js"></script>
+
+</body>
+
+</html>
