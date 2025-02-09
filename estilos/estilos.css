@@ -64,7 +64,7 @@ body {
 .menu>a:nth-child(8) {
     background-size: 100% 100%;
     color: black;
-    background-image: url('carritosolo.png');
+    background-image: url('/carritosolo.png');
     background-repeat: no-repeat;
     height: 2.3vw;
     width: 1vw;
@@ -160,7 +160,7 @@ img {
 }
 
 .boton {
-    background-image: url('anadir-al-carrito.png');
+    background-image: url('/anadir-al-carrito.png');
     background-repeat: no-repeat;
     height: 8vw;
     width: 8vw;
@@ -262,7 +262,7 @@ aside {
 }
 
 .eliminar {
-    background-image: url("borrar.png");
+    background-image: url("/borrar.png");
     background-repeat: no-repeat;
     height: 2vw;
     width: 2vw;
