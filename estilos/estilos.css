@@ -262,7 +262,7 @@ aside {
 }
 
 .eliminar {
-    background-image: url("/borrar.png");
+    background-image: url("../borrar.png");
     background-repeat: no-repeat;
     height: 2vw;
     width: 2vw;
