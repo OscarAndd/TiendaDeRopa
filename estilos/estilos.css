@@ -256,9 +256,10 @@ aside {
 }
 
 .contenedor1 {
-    height: 70%;
+    flex-grow: 1;
     scrollbar-width: 1%;
     overflow: auto;
+    width: 100%;
 }
 
 .eliminar {
@@ -348,10 +349,20 @@ td {
 }
 
 .contenedor2 {
-    border-top: solid 1px;
+  /* align-self: end;*/
+   width: 100%;
+   margin-bottom: 3px;
+   margin-top: 10%;
     /*height: 11%;*/
 }
-
+.aside{
+    height: 100%;
+    border: solid 2px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    
+}
 .total {
     border-bottom: solid 1px;
     text-align: left;
