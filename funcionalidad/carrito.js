@@ -37,7 +37,7 @@ document.getElementById('miTienda').addEventListener('click', function (event) {
         imgFullURL = content.querySelector('img').src;
 
         //CUANDO AGREGO UN PRODUCTO EL LOGO DEL CARRITO CAMBIA A NO VACIO:
-        document.getElementById("carritoVacio").style.backgroundImage = "url(carritolisto.png)";
+        document.getElementById("carritoVacio").style.backgroundImage = "url(../carritolisto.png)";
         //CREO UN NUEVO OBJETO DE TIPO PRODUCTO CON LOS DATOS UNICOS DEL PRODUCTO SELECCIONADO:
         jug = new producto(idProducto, nombre, talla, precio, imgFullURL, cantidad);
         //SI EL CARRITO ESTA VACIO ENTONCES ACTIVO LA BANDERA PARA AGREGAR A LA LISTA DE PRODUCTOS:
@@ -91,7 +91,7 @@ function publicar(datos) {
     //AL MENU DE CARRITO DE COMPRAS. EL PROCESO SE REPITE HASTA MOSTRAR TODO EL CONTENIDO DE LA LISTA DE PRODUCTOS
     for (let i = 0; i < datos.length; i++) {
         document.getElementById('tabla').insertRow(-1).innerHTML = `<td><p class="detallesProducto">Detalles producto:</p></td>`
-        document.getElementById('tabla').insertRow(-1).innerHTML = `<td rowspan="4"><img style="background-image: url(${datos[i].imagen});" class="preview" id="preview"></img></td><td><p id="nombre1" class="nombre1">${datos[i].nombre}</p></td><td rowspan="4"> <button class="eliminar" id=${datos[i].id}></button></td>`
+        document.getElementById('tabla').insertRow(-1).innerHTML = `<td rowspan="4"><img style="background-image: url("../"+${datos[i].imagen});" class="preview" id="preview"></img></td><td><p id="nombre1" class="nombre1">${datos[i].nombre}</p></td><td rowspan="4"> <button class="eliminar" id=${datos[i].id}></button></td>`
         document.getElementById('tabla').insertRow(-1).innerHTML = `<td><p id="talla1" class="talla1">${datos[i].talla}</p></td>`
         document.getElementById('tabla').insertRow(-1).innerHTML = `<td><p id="precio1" class="precio1">${datos[i].precio}</p></td>`
         document.getElementById('tabla').insertRow(-1).innerHTML = `<td ><input type="number" placeholder="Cantidad" id=${datos[i].id} class="cantidad" name="cantidad" value=${datos[i].cantidad}></input></td>`
@@ -115,7 +115,7 @@ document.getElementById('tabla').addEventListener('click', function (event) {
             publicar(miCarrito);//ACTUALIZO LA INTERFAZ
             //SI YA NO QUEDAN ELEMENTOS EN LA LISTA MUESTRO MENSAJE DE CARRITO VACIO Y CAMBIO EL ICONO DEL CARRITO:
             if (miCarrito.length == 0) {
-                document.getElementById("carritoVacio").style.backgroundImage = "url(carritosolo.png)";
+                document.getElementById("carritoVacio").style.backgroundImage = "url(../carritosolo.png)";
                 noProductos();
                 inicio++;
             }
