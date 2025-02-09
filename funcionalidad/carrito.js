@@ -37,7 +37,7 @@ document.getElementById('miTienda').addEventListener('click', function (event) {
         imgFullURL = content.querySelector('img').src;
 
         //CUANDO AGREGO UN PRODUCTO EL LOGO DEL CARRITO CAMBIA A NO VACIO:
-        document.getElementById("carritoVacio").style.backgroundImage = "url(/carritolisto.png)";
+        document.getElementById("carritoVacio").style.backgroundImage = "url(carritolisto.png)";
         //CREO UN NUEVO OBJETO DE TIPO PRODUCTO CON LOS DATOS UNICOS DEL PRODUCTO SELECCIONADO:
         jug = new producto(idProducto, nombre, talla, precio, imgFullURL, cantidad);
         //SI EL CARRITO ESTA VACIO ENTONCES ACTIVO LA BANDERA PARA AGREGAR A LA LISTA DE PRODUCTOS:
@@ -115,7 +115,7 @@ document.getElementById('tabla').addEventListener('click', function (event) {
             publicar(miCarrito);//ACTUALIZO LA INTERFAZ
             //SI YA NO QUEDAN ELEMENTOS EN LA LISTA MUESTRO MENSAJE DE CARRITO VACIO Y CAMBIO EL ICONO DEL CARRITO:
             if (miCarrito.length == 0) {
-                document.getElementById("carritoVacio").style.backgroundImage = "url(/carritosolo.png)";
+                document.getElementById("carritoVacio").style.backgroundImage = "url(carritosolo.png)";
                 noProductos();
                 inicio++;
             }
